@@ -1,77 +1,49 @@
 import java.util.Scanner;
 
 public class Operaciones {
-
     public static void main(String[] args) {
+        System.out.println("Opciones a elegir");
+        System.out.println("1 = sumar");
+        System.out.println("2 = restar");
+        System.out.println("3 = multiplicar");
+        System.out.println("4 = dividir");
+        System.out.println("5 = resto");
+        System.out.println("Dígita la opción");
 
+        int entradaOpcionPorTeclado = 0;
         int resultado = 0;
-        
-        System.out.println("Operaciones disponibles");
-        System.out.println("Suma = 1");
-        System.out.println("Resta = 2");
-        System.out.println("Multiplicación = 3");
-        System.out.println("División = 4");
-        System.out.println("Introduce el número que corresponde a tu operación");
+        Scanner entradaOpcionPorScanner = new Scanner(System.in);
+        entradaOpcionPorTeclado = entradaOpcionPorScanner.nextInt();
 
-        int opcionEntradaTeclado = 0;
-        Scanner opcionEntradaScanner = new Scanner (System.in);
-        opcionEntradaTeclado = opcionEntradaScanner.nextInt();
-
-
-        if(opcionEntradaTeclado !=1 && opcionEntradaTeclado !=2 && opcionEntradaTeclado !=3 && opcionEntradaTeclado !=4){
-            System.out.println("opción no existe");
-            
+        if(entradaOpcionPorTeclado !=1 && entradaOpcionPorTeclado !=2 && entradaOpcionPorTeclado !=3 && entradaOpcionPorTeclado !=4 
+        && entradaOpcionPorTeclado !=5){
+            System.out.println("código incorrecto");
         }else{
+            System.out.println("ingrese el primer valor:");
+            int ingresoNumeroUnoPorTeclado = 0;
+            ingresoNumeroUnoPorTeclado = entradaOpcionPorScanner.nextInt();
 
-            System.out.println("Introduzca el primer valor");
-            int numUnoEntradaTeclado = 0;
-            numUnoEntradaTeclado = opcionEntradaScanner.nextInt();
-    
-            System.out.println("Introduzca el segundo valor");
-            int numDosEntradaTeclado = 0;
-            numDosEntradaTeclado = opcionEntradaScanner.nextInt();
-    
+            System.out.println("Ingrese el segundo valor");
+            int ingresoNumeroDosPorTeclado = 0;
+            ingresoNumeroDosPorTeclado =  entradaOpcionPorScanner.nextInt();
             
-            if (opcionEntradaTeclado == 1){
-                resultado = numUnoEntradaTeclado + numDosEntradaTeclado;
+
+            if (entradaOpcionPorTeclado == 1){
+                resultado = ingresoNumeroUnoPorTeclado + ingresoNumeroDosPorTeclado;
                 System.out.println("el resultado de la suma es: " + resultado);
-            }else if(opcionEntradaTeclado == 2){
-                resultado = numUnoEntradaTeclado - numDosEntradaTeclado;
+            }else if(entradaOpcionPorTeclado == 2){
+                resultado = ingresoNumeroUnoPorTeclado - ingresoNumeroDosPorTeclado;
                 System.out.println("el resultado de la resta es: " + resultado);
-            }else if(opcionEntradaTeclado == 3){
-                resultado = numUnoEntradaTeclado * numDosEntradaTeclado;
+            }else if(entradaOpcionPorTeclado == 3){
+                resultado = ingresoNumeroUnoPorTeclado * ingresoNumeroDosPorTeclado;
                 System.out.println("el resultado de la multiplicación es: " + resultado);
-            }else if (opcionEntradaTeclado == 4){
-                resultado = (numUnoEntradaTeclado + numDosEntradaTeclado) /2;
+            }else if(entradaOpcionPorTeclado == 4){
+                resultado = (ingresoNumeroUnoPorTeclado + ingresoNumeroDosPorTeclado) /2;
                 System.out.println("el resultado de la división es: " + resultado);
             }else{
-                System.out.println("código no existe");
+                resultado = ingresoNumeroUnoPorTeclado % ingresoNumeroDosPorTeclado;
+                System.out.println("el resto de la operación es: " + resultado);
             }
         }
     }
 }
-
-
-
-// public class Operaciones {
-//     public static void main(String[] args) {
-//         Scanner entradaDeDatos = new Scanner (System.in);
-//         String nombre = "";
-//         int numUno = 0, numDos = 0, resultado = 0;
-
-//         System.out.println("¿Cuál es tú nombre");
-//         nombre = entradaDeDatos.nextLine();
-
-//         System.out.println("dame el primer valor para la suma: ");
-//         numUno = entradaDeDatos.nextInt();
-
-//         System.out.println("dame el segundo valor para la suma");
-//         numDos = entradaDeDatos.nextInt();
-
-//         resultado = numUno + numDos;
-
-//         System.out.println("Hola " + nombre + " el resultado de la suma es: " + resultado);
-
-
-//     }
-// }
