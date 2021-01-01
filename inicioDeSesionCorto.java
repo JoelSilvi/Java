@@ -5,7 +5,7 @@ public class inicioDeSesionCorto {
 
     Scanner entradaScanner = new Scanner(System.in);
 
-        String nombreBD = "joel";
+        String nombreBD = "Joel";
         String nombreEntrada = "";
         String passBD = "12";
         String passEntrada = "";
@@ -18,7 +18,7 @@ public class inicioDeSesionCorto {
         System.out.println("Ingrese pass");
         passEntrada = entradaScanner.nextLine();
 
-        while (!nombreBD.equals(nombreEntrada) || !passBD.equals(passEntrada)) {
+        while (!nombreBD.equalsIgnoreCase(nombreEntrada) || !passBD.equals(passEntrada)) {
             System.out.println("");
             System.out.println("usuario o pass incorrectos, vuelva a intentarlo");
             System.out.println("");
